@@ -28,7 +28,7 @@ if(isset($_GET['image_id'])){
 
         if(mysqli_num_rows($result) != 0){
 
-        // Deleteing the image from uploads file
+        // Deleteing the image from images file
         $image = $result->fetch_assoc();
         $img_url = $image["url"];
         $img_path = 'images/'.$img_url;
@@ -48,9 +48,9 @@ if(isset($_GET['image_id'])){
 
         if(mysqli_num_rows($result) != 0){   
 
-        $query2 = $mysqli->prepare("DELETE FROM comments WHERE comments_id = ?");
-        $query2->bind_param("i",$comments_id);
-        $query2->execute();
+        $query3 = $mysqli->prepare("DELETE FROM comments WHERE comments_id = ?");
+        $query3->bind_param("i",$comments_id);
+        $query3->execute();
         $response["Success"] = " Your comment is deleted !";
         echo json_encode($response);
         exit();
