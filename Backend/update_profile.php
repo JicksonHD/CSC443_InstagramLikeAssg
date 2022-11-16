@@ -23,8 +23,10 @@ if (isset($_POST['user_id']) && isset($_POST['first_name']) && isset($_POST['las
         $query1->bind_param("i", $user_id);
         $query1->execute();
         $result1 = $query1->get_result();
-
+        
         if (mysqli_num_rows($result1) == 0) {
+
+    
             $response ["Error"] = "Invalid User";
             echo json_encode($response);
             exit();
