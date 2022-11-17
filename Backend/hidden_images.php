@@ -34,7 +34,7 @@ if (isset($_GET['user_id_hiding']) && isset($_GET['image_id']) && isset($_GET['u
         }
         else{
 
-            // Check for eligibility
+            // Check if the user hiding the picture is the owner of the picture
             $query1 = $mysqli->prepare("SELECT * FROM images WHERE image_id = ? AND user_id = ?");
             $query1->bind_param("ii", $img_id, $user_id_hiding);
             $query1->execute();
