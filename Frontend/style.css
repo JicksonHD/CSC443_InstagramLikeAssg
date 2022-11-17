@@ -1,0 +1,30 @@
+.background{
+
+    background-image: url("./background/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 400px;
+    top: 50%;
+    box-shadow: 0 0 3px 0;
+    background: inherit;
+    backdrop-filter: blur(100px);
+    margin: 100px;
+    border-radius: 25px;
+  }
+
+  .font_color{
+
+    color: white;
+  }
+
+  .welcome_text_placement{
+    
+    margin: 30px 15px 30px;
+  }
