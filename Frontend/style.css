@@ -49,3 +49,18 @@
 
     margin: 0px 10px 0px 800px;
   }
+
+  .email_login_placement{
+
+    margin: 180px 115px 10px 10px;
+  }
+
+  .password_login_placement{
+
+    margin: 100px 110px 150px 100px;
+  }
+
+  .signUp_link{
+
+    margin-left: 470px;
+  }
