@@ -35,6 +35,22 @@
     border-radius: 25px;
   }
 
+  .card_signup {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 400px;
+    width: 400px;
+    top: 50%;
+    box-shadow: 0 0 3px 0;
+    background: transparent;
+    backdrop-filter: blur(4px);
+    margin: auto;
+    margin-top: 150px;
+    border-radius: 25px;
+  }
+
   .font_color{
 
     color: white;
@@ -60,7 +76,22 @@
     margin: 100px 110px 150px 100px;
   }
 
+  .firstname_signup_placement{
+
+    margin: 70px 115px 50px 10px;
+  }
+
+  .lastname_signup_placement{
+
+    margin: 100px 110px 150px 100px;
+  }
+
   .signUp_link{
 
-    margin-left: 470px;
+    margin-left: 650px;
+  }
+
+  .logIn_link{
+
+    margin-left: 650px;
   }
