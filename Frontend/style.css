@@ -73,7 +73,7 @@
 
   .password_login_placement{
 
-    margin: 100px 110px 150px 100px;
+    margin: 100px 110px 100px 100px;
   }
 
 
@@ -102,6 +102,11 @@
 .button_signup_placement{
 
     margin: 0px 170px 30px 115px;
+  }
+
+.button_login_placement{
+
+    margin: 0px 180px 30px 110px;
   }
 
 .signUp_link{
