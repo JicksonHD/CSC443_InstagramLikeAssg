@@ -40,7 +40,7 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
-    height: 400px;
+    height: 500px;
     width: 400px;
     top: 50%;
     box-shadow: 0 0 3px 0;
@@ -76,22 +76,40 @@
     margin: 100px 110px 150px 100px;
   }
 
-  .firstname_signup_placement{
 
-    margin: 70px 115px 50px 10px;
+.email_signup_placement{
+
+    margin: 50px 115px 10px 10px;
   }
 
-  .lastname_signup_placement{
+.password_signup_placement{
 
-    margin: 100px 110px 150px 100px;
+    margin: 50px 115px 150px 100px;
   }
 
-  .signUp_link{
+
+.firstname_signup_placement{
+
+    margin: 220px 115px 10px 10px;
+  }
+
+.lastname_signup_placement{
+
+    margin: 50px 115px 10px 100px;
+  }
+
+
+.button_signup_placement{
+
+    margin: 0px 170px 30px 115px;
+  }
+
+.signUp_link{
 
     margin-left: 650px;
   }
 
-  .logIn_link{
+.logIn_link{
 
     margin-left: 650px;
   }
