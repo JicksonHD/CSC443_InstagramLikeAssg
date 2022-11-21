@@ -175,3 +175,35 @@ body {font-family: Arial, Helvetica, sans-serif;}
     text-align: left;
   }
 }
+
+
+.comment-placement{
+  
+  display: flex;
+  
+
+}
+
+.comment-placement2{
+
+  margin: 900px 200px 0px 20px;
+}
+
+.heart-placement{
+
+  display: flex;
+
+}
+
+.heart-placement2{
+  
+  margin: 900px 10px 10px 90px;
+}
+
+.full-heart-placement{
+
+  opacity: 10;
+  
+
+}
+
