@@ -116,3 +116,84 @@ pages.load_signup = () =>{
       signup_btn.addEventListener("click", signup);
 
 };
+
+pages.load_stream = async () => {
+  const user = JSON.parse(localStorage.getItem("userData"));
+  const user_id = user[0].user_id;
+  const getImages = async () => {
+    const get_images_url = base_url + "getImages.php?user_id=" + user_id;
+    const response = await pages.getAPI(get_images_url);
+    if (response.data.Error) {
+      console.log(response.data.Error);
+    } else {
+
+      const images = response.data;
+      let images_list =`<html>
+
+      <head>
+          <title>Stream page</title>
+          <link rel="stylesheet" href="style.css">
+          
+      
+      </head>
+      
+          <body>
+      
+              <!-- The navigation menu -->
+      <div class="navbar">
+          <a class="active">Home</a>
+          <a href="#">Add image</a>
+          <a href="#">Profile</a>
+        </div>`;
+      images.map(
+        (image, i) =>
+          (images_list += `<div class="card_stream">
+
+          <div>
+            <img class="img-placement" src="../Backend/Images/${image.url}" >
+          </div>
+          <div class="heart-placement comment-placement">
+      
+            <div>
+      
+              <img class = "heart_img" style="margin-right: 20px;" src="./empty_heart.png" width="25px" height="25px" />
+      
+            </div>
+      
+            <div>
+      
+              <img class="comment" style="margin-right: 10px;" src="./comment.png" width="25px" height="25px" />
+      
+            </div>
+      
+          </div>
+      
+          <div class="description-placement">
+            <p>${image.description}</p>
+          </div>
+      
+        </div>
+      `)
+      );
+      images_list+=`<div class="comment-card comment-top" id ="add_comment">
+      <div class="flex-row">
+        <div class="x-icon" id="x_icon">
+          <img src="./x_icon.png" width="20px" height="20px" />
+        </div>
+      </div>
+      <textarea id = "comment_content" class="comment-area" rows="10" cols="5"></textarea>
+      <form class="form">
+        <input class="add-btn" id="add_btn" type="button" value="Add" />
+      </form>
+    </div>
+    <script src="functionality.js" type="text/javascript"></script>
+    </body>
+  
+  </html>`;
+  document.write(images_list);
+    }
+}
+getImages();
+
+
+}

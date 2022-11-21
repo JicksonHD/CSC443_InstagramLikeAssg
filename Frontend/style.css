@@ -270,3 +270,16 @@ body {font-family: Arial, Helvetica, sans-serif;}
   align-items: center;
 
 }
+
+.description-placement{
+
+  margin-right: 300px;
+}
+
+.img-placement{
+
+  margin-right: 60px;
+  margin-bottom: 60px;
+  width: 300px;
+  height: 300px ;
+}
