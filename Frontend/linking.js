@@ -114,8 +114,47 @@ pages.load_signup = () =>{
         }
       };
       signup_btn.addEventListener("click", signup);
-
 };
+
+pages.load_profile = () =>{
+
+  const save_btn = document.getElementById("save");
+  const result = document.getElementById("response");
+
+  const responseHandler = () => {
+      result.innerHTML = '<div id = "response" class = "response_font"></div>';
+    };
+
+  const profile = async () => {
+
+      const profile_url = base_url + "update_profile.php";
+  
+      const profile_data = new URLSearchParams();
+      profile_data.append("first_name", document.getElementById("first_name").value);
+      profile_data.append("last_name", document.getElementById("last_name").value);
+      profile_data.append("email", document.getElementById("email").value);
+  
+      const response = await pages.postAPI(
+        profile_url,
+        profile_data
+      );
+      if (response.data.error) {
+        result.innerHTML =
+          '<div id = "response" class = "response_font">' +
+          response.data.error +
+          "</div>";
+        setTimeout(responseHandler, 2000);
+      } else {
+        result.innerHTML =
+          '<div id = "response" class = "response_font">' +
+          response.data.success +
+          "<br>Now Login!</div>";
+        setTimeout(responseHandler, 2000);
+      }
+    };
+    save_btn.addEventListener("click", profile);
+};
+
 
 pages.load_stream = async () => {
   const user = JSON.parse(localStorage.getItem("userData"));
@@ -143,7 +182,7 @@ pages.load_stream = async () => {
       <div class="navbar">
           <a class="active">Home</a>
           <a href="#">Add image</a>
-          <a href="#">Profile</a>
+          <a href="profile.html">Profile</a>
         </div>`;
       images.map(
         (image, i) =>
@@ -194,6 +233,4 @@ pages.load_stream = async () => {
     }
 }
 getImages();
-
-
 }
